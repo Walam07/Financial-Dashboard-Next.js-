@@ -1,0 +1,104 @@
+Of course, here is a complete `README.md` file for your financial dashboard project.
+
+-----
+
+# Financial Dashboard Project 🚀
+
+This project is a front-end application built to recreate a financial dashboard UI from a provided design. It includes data visualization, PDF report generation, and has been configured for deployment as a native mobile application using Capacitor.
+
+## ✨ Features
+
+  * **Responsive UI**: A complete and responsive dashboard interface built with Tailwind CSS.
+  * **Data Visualization**: Interactive charts for visualizing client data and business metrics using Recharts.
+  * **PDF Export**: Users can download a PDF summary of the dashboard statistics.
+  * **Mobile Ready**: Configured with Capacitor to be built as a native Android or iOS application.
+  * **Mock API**: Utilizes Next.js API routes to serve mock data for a realistic development experience.
+
+-----
+
+## 🛠️ Tech Stack
+
+  * **Framework**: Next.js 14 (App Router)
+  * **Styling**: Tailwind CSS
+  * **UI/State Management**: React 18
+  * **Charting**: Recharts
+  * **PDF Generation**: jsPDF & html2canvas
+  * **Mobile Wrapper**: Capacitor
+
+-----
+
+## \#\# Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### \#\#\# Prerequisites
+
+  * Node.js (v18 or later)
+  * Yarn package manager
+  * Android Studio (for Android builds)
+  * Xcode (for iOS builds on macOS)
+
+### \#\#\# Installation and Setup
+
+1.  **Clone the repository:**
+
+    ```bash
+    git clone <your-repository-url>
+    cd financial-dashboard
+    ```
+
+2.  **Install dependencies:**
+
+    ```bash
+    yarn
+    ```
+
+3.  **Create the environment file:**
+    Create a new file named **`.env.local`** in the root of the project and add the following line:
+
+    ```
+    NEXT_PUBLIC_API_URL=http://localhost:3000
+    ```
+
+4.  **Run the development server:**
+
+    ```bash
+    yarn dev
+    ```
+
+    Open **http://localhost:3000** in your browser to see the application.
+
+-----
+
+## \#\# Building for Mobile (Capacitor) 📱
+
+To build the native mobile application, follow these steps after completing the initial setup.
+
+1.  **Build the web assets:**
+    This command creates a static version of your site in the `out` folder.
+
+    ```bash
+    yarn build
+    ```
+
+2.  **Sync the web assets with Capacitor:**
+    This copies your web build into the native mobile platforms.
+
+    ```bash
+    yarn cap sync
+    ```
+
+3.  **Open the native project:**
+    This will open the project in its respective IDE, where you can build and run it on an emulator or a physical device.
+
+    **For Android:**
+
+    ```bash
+    yarn cap open android
+    ```
+
+    **For iOS** (requires macOS):
+
+    ```bash
+    yarn cap open ios
+    ```
