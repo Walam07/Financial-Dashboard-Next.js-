@@ -1,0 +1,36 @@
+{
+  "aum": {
+    "value": "12.19 Cr",
+    "change": "+0.77%"
+  },
+  "sip": {
+    "value": "1.39 Lakh",
+    "change": "+0%"
+  },
+  "summary": [
+    { "title": "Purchases", "value": "15", "amount": "25000.00 INR" },
+    { "title": "Redemptions", "value": "5", "amount": "8000.00 INR" },
+    { "title": "Rej. Transactions", "value": "1", "amount": "500.00 INR" },
+    { "title": "SIP Rejections", "value": "2", "amount": "1000.00 INR" },
+    { "title": "New SIP", "value": "10", "amount": "15000.00 INR" }
+  ],
+  "clients": [
+    { "name": "Online", "value": 3824 },
+    { "name": "Active", "value": 541 },
+    { "name": "New", "value": 60 },
+    { "name": "Inactive", "value": 2 }
+  ],
+  "sipBusiness": [
+    { "name": "Apr", "bar": 18, "line": 110 },
+    { "name": "May", "bar": 15, "line": 95 },
+    { "name": "Jun", "bar": 16, "line": 105 }
+  ],
+  "monthlyMis": [
+    { "name": "Jan", "line1": 200, "line2": 300 },
+    { "name": "Feb", "line1": 280, "line2": 320 },
+    { "name": "Mar", "line1": 350, "line2": 310 },
+    { "name": "Apr", "line1": 320, "line2": 380 },
+    { "name": "May", "line1": 400, "line2": 350 },
+    { "name": "Jun", "line1": 380, "line2": 410 }
+  ]
+}
