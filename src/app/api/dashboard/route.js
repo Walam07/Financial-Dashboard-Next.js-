@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 
+export const dynamic = 'force-dynamic'; // Add this line
+
 const generateData = (factor = 1) => ({
   aum: {
     value: `${(12.19 * factor).toFixed(2)} Cr`,
@@ -16,27 +18,10 @@ const generateData = (factor = 1) => ({
     { title: "SIP Rejections", value: Math.floor(2 * factor), amount: `${(1000 * factor).toFixed(2)} INR` },
     { title: "New SIP", value: Math.floor(10 * factor), amount: `${(15000 * factor).toFixed(2)} INR` },
   ],
-  clients: [
-    { name: 'Online', value: 3824 + Math.floor(50 * factor) },
-    { name: 'Active', value: 541 + Math.floor(20 * factor) },
-    { name: 'New', value: 60 + Math.floor(10 * factor) },
-    { name: 'Inactive', value: 2 + Math.floor(factor) },
-  ],
-  sipBusiness: [
-      { name: 'Apr', bar: 18 * factor, line: 110 * factor },
-      { name: 'May', bar: 15 * factor, line: 95 * factor },
-      { name: 'Jun', bar: 16 * factor, line: 105 * factor },
-  ],
-  monthlyMis: [
-      { name: 'Jan', line1: 200 * factor, line2: 300 * factor },
-      { name: 'Feb', line1: 280 * factor, line2: 320 * factor },
-      { name: 'Mar', line1: 350 * factor, line2: 310 * factor },
-      { name: 'Apr', line1: 320 * factor, line2: 380 * factor },
-      { name: 'May', line1: 400 * factor, line2: 350 * factor },
-      { name: 'Jun', line1: 380 * factor, line2: 410 * factor },
-  ],
+  clients: [ { name: 'Online', value: 3824 }, { name: 'Active', value: 541 }, { name: 'New', value: 60 }, { name: 'Inactive', value: 2 } ],
+  sipBusiness: [ { name: 'Apr', bar: 18, line: 110 }, { name: 'May', bar: 15, line: 95 }, { name: 'Jun', bar: 16, line: 105 } ],
+  monthlyMis: [ { name: 'Jan', line1: 200, line2: 300 }, { name: 'Feb', line1: 280, line2: 320 }, { name: 'Mar', line1: 350, line2: 310 } ],
 });
-
 
 export async function GET(request) {
   const { searchParams } = new URL(request.url);
@@ -51,9 +36,7 @@ export async function GET(request) {
     default: factor = 1;
   }
   
-  // Simulate network delay
   await new Promise(resolve => setTimeout(resolve, 1000));
-
   const data = generateData(factor);
   return NextResponse.json(data);
 }
